@@ -1,0 +1,13 @@
+#welcome {
+    display: grid;
+    place-items: center;
+};
+
+.welcome-message {
+    text-align: center;
+};
+
+.home-image {
+    align-items: center;
+};
+

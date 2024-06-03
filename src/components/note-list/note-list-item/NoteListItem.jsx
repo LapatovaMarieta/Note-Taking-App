@@ -7,9 +7,11 @@ export default function NoteListItem ({
     title,
     summary,
 }) {
+
+    const cardTitle = `Title: ${title}`
     return (
         <Card
-        title={title}
+        title={cardTitle}
         bordered={false}
         style={{
           width: 300,

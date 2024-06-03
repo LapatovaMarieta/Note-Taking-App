@@ -1,0 +1,11 @@
+.content-section {
+    min-height: 80vh;
+}
+
+.ant-card {
+    margin-bottom: 20px;
+}
+
+.ant-pagination {
+    text-align: center;
+}

@@ -11,37 +11,25 @@ import NoteDetails from './components/note-details/NoteDetails';
 import NoteEdit from './components/note-edit/NoteEdit';
 import FooterPage from './components/FooterPage';
 
-import { Layout, theme } from 'antd';
+import { Layout } from 'antd';
 const { Content } = Layout;
 
 function App() {
-  const { colorBgContainer, borderRadiusLG } = theme.useToken();
 
   return (
     <NoteProvider>
       <Layout>
         <HeaderPage />
-        <Content
-          style={{
-            padding: '0 48px',
-          }}
-        >
-          <div
-            style={{
-              background: colorBgContainer,
-              minHeight: 280,
-              padding: 24,
-              borderRadius: borderRadiusLG,
-            }}
-          >
-            <Routes>
-              <Route path={Path.Home} element={<Home />} />
-              <Route path={Path.Notes} element={<NoteList />} />
-              <Route path={Path.NoteCreate} element={<NoteCreate />} />
-              <Route path={Path.NoteDetails} element={<NoteDetails />} />
-              <Route path={Path.NoteEdit} element={<NoteEdit />} />
-            </Routes>
-          </div>
+        <Content className='content'>
+            <div className='content-section'>
+                <Routes>
+                <Route path={Path.Home} element={<Home />} />
+                <Route path={Path.Notes} element={<NoteList />} />
+                <Route path={Path.NoteCreate} element={<NoteCreate />} />
+                <Route path={Path.NoteDetails} element={<NoteDetails />} />
+                <Route path={Path.NoteEdit} element={<NoteEdit />} />
+                </Routes>
+            </div>
         </Content>
         <FooterPage />
       </Layout>
